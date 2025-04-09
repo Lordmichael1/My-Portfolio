@@ -1,0 +1,61 @@
+.Parent {
+    width: 100%;
+    height: 100vh;
+    /* background-color: #fff; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+
+    & .HeroThree {
+        width: 90%;
+        height: 80%;
+        /* background-color: #fff; */
+        display: flex;
+        gap: 30px;
+
+        & .AboutText3 {
+            width: 50%;
+            height: 90%;
+            display: flex;
+            flex-direction: column;
+            /* background-color: aqua; */
+            justify-content: flex-end;
+
+        
+
+
+            & .Txt {
+                width: 100%;
+                height: 85%;
+                /* background-color: black; */
+                display: flex;
+                flex-direction: column;
+                font-size: 19px;
+                font-size: 19px;
+                word-spacing: 5px;
+                line-height: 28px;
+
+
+                & a {
+                    text-decoration: none;
+                    color: orange;
+                }
+            }
+        }
+
+
+        & .About3pics {
+            width: 50%;
+            height: 90%;
+            background-color: #fff;
+        }
+
+
+    }
+
+
+    
+}
+

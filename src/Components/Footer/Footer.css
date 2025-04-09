@@ -1,0 +1,20 @@
+.Footer {
+    width: 90%;
+    height: 12vh;
+    /* background-color: #fff; */
+    
+    & .foot {
+        width: 100%;
+        height: 80%;
+        background: rgba(8, 21, 73, 0.35);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5.4px);
+        -webkit-backdrop-filter: blur(5.4px);
+        border: 1px solid rgba(164, 171, 201, 0.61);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-inline: 30px;
+    }
+}

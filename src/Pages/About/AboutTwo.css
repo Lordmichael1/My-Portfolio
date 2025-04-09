@@ -1,0 +1,61 @@
+.Wrapper {
+    width: 100%;
+    height: 100vh;
+    /* background-color: #fff; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+
+    & .HeroTwo {
+        width: 90%;
+        height: 80%;
+        /* background-color: #fff; */
+        display: flex;
+        gap: 30px;
+
+        & .AboutText2 {
+            width: 50%;
+            height: 90%;
+            display: flex;
+            flex-direction: column;
+            /* background-color: aqua; */
+            justify-content: flex-end;
+
+        
+
+
+            & .AboutLowerTxt {
+                width: 100%;
+                height: 80%;
+                /* background-color: black; */
+                display: flex;
+                flex-direction: column;
+                font-size: 19px;
+                font-size: 19px;
+                word-spacing: 5px;
+                line-height: 28px;
+
+
+                & a {
+                    text-decoration: none;
+                    color: orange;
+                }
+            }
+        }
+
+
+        & .Aboutpics {
+            width: 50%;
+            height: 90%;
+            background-color: #fff;
+        }
+
+
+    }
+
+
+    
+}
+

@@ -1,0 +1,82 @@
+.MainContainer {
+    width: 100%;
+    height: 100vh;
+    /* background-color: #fff; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    & .Hero {
+        width: 90%;
+        height: 80%;
+        /* background-color: #fff; */
+        display: flex;
+        gap: 20px;
+
+
+        & .text {
+            width: 50%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            & .upperText {
+                width: 100%;
+                height: 35%;
+                /* background-color: black; */
+                display: flex;
+                align-items: flex-end;
+
+            }
+
+            & .lowerText {
+                width: 100%;
+                height: 50%;
+                /* background-color: black; */
+                display: flex;
+                flex-direction: column;
+                font-size: 19px;
+                word-spacing: 5px;
+                line-height: 28px;
+
+                & .btn {
+                    width: 130px;
+                    height: 40px;
+                    border: none;
+                    outline: none;
+                    background-color: orange;
+                    color: rgb(4, 12, 46);
+                    border-radius: 50px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 2px;
+                    font-size: 13px;
+                    font-weight: 600;
+                } 
+
+                & .btn:hover {
+                    background-color: rgb(4, 12, 46);
+                    border: 1px solid white;
+                    color: orange;
+                    transform: scale(1.1);
+                    box-shadow: rgba(189, 188, 188, 0.35) 0px 5px 15px;                }
+                
+                & a {
+                    text-decoration: none;
+                    color: orange;
+                }
+            }
+        }
+
+        & .picture {
+            width: 50%;
+            height: 90%;
+            background-color: #fff;
+        }
+    }
+    
+}
+

@@ -1,0 +1,62 @@
+.MainHeader {
+    width: 90%;
+    height: 12vh;
+    /* background-color: white; */
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: fixed;
+
+
+    & a {
+        text-decoration: none;
+        color: white;
+    }
+}
+
+.subHeader {
+    width: 100%;
+    height: 80%;
+    background: rgba(8, 21, 73, 0.35);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.4px);
+    -webkit-backdrop-filter: blur(5.4px);
+    border: 1px solid rgba(164, 171, 201, 0.61);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 30px;
+
+}
+
+.nav {
+    width: 50%;
+    height: 100%;
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-weight: 200;
+    font-size: 15px;
+
+}
+
+.nav a.active {
+    color: orange;
+    border-bottom: 1px solid orange;
+    font-size: 20px;
+}
+  
+
+
+.logo {
+    width: 40%;
+    height: 100%;
+
+    & img {
+        width: 15%;
+        height: 100%;
+        /* background-color: bisque; */
+    }
+}
