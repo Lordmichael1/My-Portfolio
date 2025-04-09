@@ -1,10 +1,11 @@
+/* Global reset */
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
 
-.App{
+.App {
   background-color: rgb(1, 1, 26);
   color: white;
   font-size: 20px;
@@ -16,6 +17,42 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 20px; 
+  gap: 20px;
   position: relative;
-} 
+  padding: 20px; /* Add some padding for mobile devices */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .App {
+    font-size: 18px; /* Slightly smaller font on mobile */
+    padding: 10px; /* Less padding on smaller screens */
+    gap: 15px; /* Reduce the space between elements */
+  }
+}
+
+/* Tablet responsiveness */
+@media (max-width: 1024px) {
+  .App {
+    font-size: 19px; /* Adjust font size for tablets */
+    padding: 15px; /* Moderate padding for tablets */
+  }
+}
+
+/* Mobile Responsiveness (Extra small screens like phones) */
+@media (max-width: 480px) {
+  .App {
+    font-size: 16px; /* Smaller font on very small devices */
+    gap: 10px; /* Adjust gap for small devices */
+  }
+
+  /* Optional: Make header text smaller on small screens */
+  .App h1 {
+    font-size: 24px;
+  }
+
+  /* If you have other elements like buttons or images, you can adjust their size as well */
+  .App button, .App img {
+    width: 100%;
+  }
+}

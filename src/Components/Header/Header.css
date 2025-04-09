@@ -1,3 +1,4 @@
+/* Main header styles */
 .MainHeader {
     width: 90%;
     height: 12vh;
@@ -30,16 +31,15 @@
 
 }
 
+/* Navigation styles */
 .nav {
     width: 50%;
     height: 100%;
-    /* background-color: aqua; */
     display: flex;
     justify-content: space-around;
     align-items: center;
     font-weight: 200;
     font-size: 15px;
-
 }
 
 .nav a.active {
@@ -47,16 +47,102 @@
     border-bottom: 1px solid orange;
     font-size: 20px;
 }
-  
 
-
+/* Logo styles */
 .logo {
     width: 40%;
     height: 100%;
+}
 
-    & img {
-        width: 15%;
-        height: 100%;
-        /* background-color: bisque; */
+.logo img {
+    width: 15%;
+    height: 100%;
+}
+
+/* Hamburger menu button */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 25px;
+    width: 30px;
+    position: absolute;
+    right: 20px; /* Position hamburger on the right side */
+}
+
+.hamburger div {
+    background-color: white;
+    height: 4px;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    /* Hide nav links on small screens */
+    .nav {
+        display: none;
+        width: 30%;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        background: rgba(8, 21, 73, 0.35);
+        border-radius: 16px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(5.4px);
+        -webkit-backdrop-filter: blur(5.4px);
+        border: 1px solid rgba(164, 171, 201, 0.61);
+        border-top: none;
+        padding: 20px;
+        position: absolute;
+        top: 9.1vh;
+        left: 70%;
+        transform: translateX(-50%) translateY(-100%); /* Center the menu and initially hide it */
+        z-index: 5;
     }
+
+    .nav a {
+        text-decoration: none;
+        color: white;
+    }
+
+    .nav a.active {
+        color: orange;
+        border-bottom: 1px solid orange;
+        font-size: 20px;
+    }
+
+    /* Show hamburger icon */
+    .hamburger {
+        display: flex;
+    }
+
+    /* Show nav when mobile menu is active */
+    .nav.active {
+        display: flex;
+        transform: translateY(0); /* Slide down to show */
+    }
+
+    .subHeader {
+        padding-inline: 15px;
+    }
+}
+
+/* Animation for hamburger menu (transition effect) */
+.nav.active + .hamburger div:nth-child(1) {
+    transform: rotate(45deg);
+    position: relative;
+    top: 6px;
+}
+
+.nav.active + .hamburger div:nth-child(2) {
+    opacity: 0;
+}
+
+.nav.active + .hamburger div:nth-child(3) {
+    transform: rotate(-45deg);
+    position: relative;
+    top: -6px;
 }
