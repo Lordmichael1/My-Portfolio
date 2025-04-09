@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import logo from '../../assets/MyLogo.png';
 import './Header.css'; // Assuming the styles are saved in Header.css
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation();
+
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -28,10 +30,10 @@ const Header = () => {
 
         {/* Navigation links */}
         <div className={`nav ${menuOpen ? 'active' : ''}`}>
-          <Link to="/about" className="nav-link">About</Link>
-          <Link to="/contact" className="nav-link">Contact</Link>
-          <Link to="/projects" className="nav-link">Projects</Link>
-          <Link to="/resume" className="nav-link">Resume</Link>
+          <Link to="/about" className={location.pathname === '/about' ? 'active' : ''}>About</Link>
+          <Link to="/contact" className={location.pathname === '/contact' ? 'active' : ''}>Contact</Link>
+          <Link to="/projects"  className={location.pathname === '/projects' ? 'active' : ''}>Projects</Link>
+          <Link to="/resume" className={location.pathname === '/resume' ? 'active' : ''}>Resume</Link>
         </div>
       </div>
     </div>

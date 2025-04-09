@@ -52,11 +52,12 @@
 .logo {
     width: 40%;
     height: 100%;
-}
 
-.logo img {
-    width: 15%;
-    height: 100%;
+    & img {
+        width: 40%;
+        height: 100%;
+        /* background-color: bisque; */
+    }
 }
 
 /* Hamburger menu button */
@@ -97,11 +98,11 @@
         border-top: none;
         padding: 20px;
         position: absolute;
-        top: 9.1vh;
+        top: 9.7vh;
         left: 70%;
         transform: translateX(-50%) translateY(-100%); /* Center the menu and initially hide it */
         z-index: 5;
-    }
+    } 
 
     .nav a {
         text-decoration: none;
@@ -122,7 +123,13 @@
     /* Show nav when mobile menu is active */
     .nav.active {
         display: flex;
-        transform: translateY(0); /* Slide down to show */
+        transform: translateX(-10%); 
+        transition:  transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+    }
+
+    .nav.active.show {
+        transform: translateX(0);
+        opacity: 1;
     }
 
     .subHeader {
@@ -145,4 +152,15 @@
     transform: rotate(-45deg);
     position: relative;
     top: -6px;
+}
+
+.logo {
+    width: 25%;
+    height: 100%;
+
+    & img {
+        width: 15%;
+        height: 100%;
+        /* background-color: bisque; */
+    }
 }
