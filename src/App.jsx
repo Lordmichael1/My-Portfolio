@@ -7,7 +7,7 @@ import "./App.css";
 import Contact from "./Pages/Contact/Contact";
 import Project from "./Pages/Project/Project";
 import Resume from "./Pages/Resume/Resume";
-import Footer from "./Components/Footer/Footer";
+import { SpeedInsights } from "@vercel/speed-insights/react"
 
 const App = () => {
   return (
@@ -23,6 +23,7 @@ const App = () => {
         </Routes>
         {/* <Footer /> */}
       </div>
+      <SpeedInsights />
     </Router>
   );
 };
