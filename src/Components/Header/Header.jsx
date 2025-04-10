@@ -16,9 +16,9 @@ const Header = () => {
     <div className="MainHeader">
       <div className="subHeader">
         <div className="logo">
-          <Link to="/" className="nav-link">
+          <Link to="/">
             <img src={logo} alt="Logo" />
-          </Link>
+          </Link>            
         </div>
 
         {/* Hamburger menu */}

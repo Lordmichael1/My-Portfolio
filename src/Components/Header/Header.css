@@ -1,4 +1,3 @@
-/* Main header styles */
 .MainHeader {
     width: 90%;
     height: 12vh;
@@ -31,15 +30,17 @@
 
 }
 
-/* Navigation styles */
+
 .nav {
     width: 50%;
     height: 100%;
+    /* background-color: aqua; */
     display: flex;
     justify-content: space-around;
     align-items: center;
     font-weight: 200;
     font-size: 15px;
+
 }
 
 .nav a.active {
@@ -47,14 +48,14 @@
     border-bottom: 1px solid orange;
     font-size: 20px;
 }
+  
 
-/* Logo styles */
+
 .logo {
     width: 40%;
     height: 100%;
 
     & img {
-        width: 40%;
         height: 100%;
         /* background-color: bisque; */
     }
@@ -159,7 +160,6 @@
     height: 100%;
 
     & img {
-        width: 15%;
         height: 100%;
         /* background-color: bisque; */
     }
