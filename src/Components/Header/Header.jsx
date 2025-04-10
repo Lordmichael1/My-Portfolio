@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import logo from '../../assets/MyLogo.png';
-import './Header.css'; // Assuming the styles are saved in Header.css
+import './Header.css'; 
+import Hamburger from 'hamburger-react';
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -22,10 +23,8 @@ const Header = () => {
         </div>
 
         {/* Hamburger menu */}
-        <div className="hamburger" onClick={toggleMenu}>
-          <div></div>
-          <div></div>
-          <div></div>
+        <div>
+          <Hamburger toggled={menuOpen} toggle={toggleMenu} size={24} color="white" />
         </div>
 
         {/* Navigation links */}

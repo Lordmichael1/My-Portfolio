@@ -82,43 +82,54 @@
 
 /* Mobile responsiveness */
 @media (max-width: 768px) {
-    /* Hide nav links on small screens */
+    .MainHeader {
+        z-index: 10;
+    }
+    
+    
     .nav {
         display: none;
-        width: 30%;
+        width: 100%;
         height: auto;
-        flex-direction: column;
+        flex-direction: row;
         align-items: center;
+        justify-content: space-around;
         gap: 15px;
-        background: rgba(8, 21, 73, 0.35);
-        border-radius: 16px;
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(5.4px);
-        -webkit-backdrop-filter: blur(5.4px);
+        background: rgb(5, 0, 27);
         border: 1px solid rgba(164, 171, 201, 0.61);
         border-top: none;
+        border-radius: 0px 0px 20px 20px;
         padding: 20px;
         position: absolute;
-        top: 9.7vh;
-        left: 70%;
-        transform: translateX(-50%) translateY(-100%); /* Center the menu and initially hide it */
+        top: 9vh;
+        right: 0;
+        left: 10%;
+        transform: translateX(-50%) translateY(0);
         z-index: 5;
     } 
 
     .nav a {
         text-decoration: none;
         color: white;
+        display: flex;
+        transform: translateX(-50%);
     }
 
     .nav a.active {
         color: orange;
         border-bottom: 1px solid orange;
         font-size: 20px;
+        transform: translateX(-50%);
+        opacity: 1;
     }
 
     /* Show hamburger icon */
     .hamburger {
         display: flex;
+        position: absolute;
+        right: 50px;
+        top: 15px;
+        z-index: 11;        
     }
 
     /* Show nav when mobile menu is active */
