@@ -29,10 +29,12 @@ const Header = () => {
 
         {/* Navigation links */}
         <div className={`nav ${menuOpen ? 'active' : ''}`}>
+          <div className="txt">
           <Link to="/about" className={location.pathname === '/about' ? 'active' : ''}>About</Link>
           <Link to="/contact" className={location.pathname === '/contact' ? 'active' : ''}>Contact</Link>
           <Link to="/projects"  className={location.pathname === '/projects' ? 'active' : ''}>Projects</Link>
           <Link to="/resume" className={location.pathname === '/resume' ? 'active' : ''}>Resume/CV</Link>
+          </div>
         </div>
       </div>
     </div>
