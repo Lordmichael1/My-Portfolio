@@ -23,7 +23,7 @@ const Header = () => {
         </div>
 
         {/* Hamburger menu */}
-        <div>
+        <div className='hamburger'>
           <Hamburger toggled={menuOpen} toggle={toggleMenu} size={24} color="white" />
         </div>
 
@@ -32,7 +32,7 @@ const Header = () => {
           <Link to="/about" className={location.pathname === '/about' ? 'active' : ''}>About</Link>
           <Link to="/contact" className={location.pathname === '/contact' ? 'active' : ''}>Contact</Link>
           <Link to="/projects"  className={location.pathname === '/projects' ? 'active' : ''}>Projects</Link>
-          <Link to="/resume" className={location.pathname === '/resume' ? 'active' : ''}>Resume</Link>
+          <Link to="/resume" className={location.pathname === '/resume' ? 'active' : ''}>Resume/CV</Link>
         </div>
       </div>
     </div>
