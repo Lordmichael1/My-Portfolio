@@ -114,7 +114,6 @@
         position: absolute;
         top: 10vh;
         left: 10%;
-        transform: translateX(-50%) translateY(0);
 
 
         & .txt {
@@ -123,7 +122,6 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            /* background-color: red; */
             gap: 20px;
 
             & a {
@@ -133,17 +131,17 @@
                 justify-content: center;
                 align-items: center;
             }
+
+            & a.active {
+                color: orange;
+                border-bottom: 1px solid orange;
+                font-size: 15px;
+            }
         }
 
     }
 
-    .nav a.active {
-        color: orange;
-        border-bottom: 1px solid orange;
-        font-size: 20px;
-        transform: translateX(-50%);
-        opacity: 1;
-    }
+     
 
     .nav.active {
         display: flex;
