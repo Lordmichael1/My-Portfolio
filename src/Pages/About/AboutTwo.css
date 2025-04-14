@@ -1,61 +1,66 @@
 .Wrapper {
     width: 100%;
-    height: 100vh;
-    /* background-color: #fff; */
+    min-height: 100vh; /* Better than fixed 100vh */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-end;
-
-
-    & .HeroTwo {
-        width: 90%;
-        height: 80%;
-        /* background-color: #fff; */
-        display: flex;
-        gap: 30px;
-
-        & .AboutText2 {
-            width: 50%;
-            height: 90%;
-            display: flex;
-            flex-direction: column;
-            /* background-color: aqua; */
-            justify-content: flex-end;
-
-        
-
-
-            & .AboutLowerTxt {
-                width: 100%;
-                height: 80%;
-                /* background-color: black; */
-                display: flex;
-                flex-direction: column;
-                font-size: 19px;
-                font-size: 19px;
-                word-spacing: 5px;
-                line-height: 28px;
-
-
-                & a {
-                    text-decoration: none;
-                    color: orange;
-                }
-            }
-        }
-
-
-        & .Aboutpics {
-            width: 50%;
-            height: 90%;
-            background-color: #fff;
-        }
-
-
+    padding: 2rem 0; /* Add spacing if needed */
+    box-sizing: border-box;
+  }
+  
+  .HeroTwo {
+    width: 90%;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap; /* helpful on tight screens */
+  }
+  
+  .AboutText2 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+  
+  .AboutLowerTxt {
+    width: 100%;
+    font-size: 19px;
+    word-spacing: 5px;
+    line-height: 28px;
+  }
+  
+  .AboutLowerTxt a {
+    text-decoration: none;
+    color: orange;
+  }
+  
+  .Aboutpics {
+    width: 50%;
+    background-color: #fff;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .Wrapper {
+      min-height: auto;
+      /* padding-top: 80%; */
     }
-
-
-    
-}
-
+  
+    .HeroTwo {
+      flex-direction: column-reverse;
+      gap: 15px;
+      height: auto; 
+    }
+  
+    .AboutText2,
+    .Aboutpics {
+      width: 100%;
+      height: auto;
+    }
+  
+    .Aboutpics {
+      height: 270px; /* Or whatever looks good on mobile */
+      background-color: #fff;
+    }
+  }
+  

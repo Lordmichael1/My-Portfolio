@@ -55,8 +55,8 @@
 
 
 .nav a.active {
-    color: orange;
-    border-bottom: 1px solid orange;
+    color: rgb(255, 196, 0);
+    border-bottom: 1px solid rgb(255, 196, 0);;
     font-size: 20px;
 }
   
@@ -91,7 +91,7 @@
 }
 
 /* Mobile responsiveness */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     .MainHeader {
         z-index: 10;
     }
@@ -133,8 +133,8 @@
             }
 
             & a.active {
-                color: orange;
-                border-bottom: 1px solid orange;
+                color: rgb(255, 196, 0);
+                border-bottom: 1px solid rgb(255, 196, 0);;
                 font-size: 15px;
             }
         }

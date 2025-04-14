@@ -44,7 +44,7 @@
             height: 40px;
             border: none;
             outline: none;
-            background-color: orange;
+            background-color: rgb(255, 196, 0);
             color: rgb(4, 12, 46);
             border-radius: 50px;
             display: flex;
@@ -58,14 +58,14 @@
           & .btn:hover {
             background-color: rgb(4, 12, 46);
             border: 1px solid white;
-            color: orange;
+            color: rgb(255, 196, 0);
             transform: scale(1.1);
             box-shadow: rgba(189, 188, 188, 0.35) 0px 5px 15px;
           }
   
           & a {
             text-decoration: none;
-            color: orange;
+            color: rgb(255, 196, 0);
           }
         }
       }
@@ -81,7 +81,7 @@
   }
   
   /* Mobile Responsiveness */
-  @media (max-width: 768px) {
+  @media screen and (max-width: 768px) {
     .MainContainer {
       align-items: center; /* Allow Hero to take full width */
       justify-content: center; 
@@ -98,10 +98,12 @@
         & .picture {
           width: 200px;
           height: 200px; 
-          border-radius: 50%;
+          border-radius: none;
           background: url(../../assets/IMG-20250202-WA0028.jpg);
           background-size: cover;
-        }  
+        }
+        
+
   
         & .text {
           width: 100%;
