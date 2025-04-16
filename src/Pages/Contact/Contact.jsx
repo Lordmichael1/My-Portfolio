@@ -7,11 +7,11 @@ const Contact = () => {
       <div className="ConHero">
       <div className="ConPics"></div>
         <div className="Context">
-          <div className="upper">
+          <div className="upper" draggable>
             <h1>I'm Michael Godwin</h1>
           </div>
           <div className="lower">
-            <div className="paragraph">
+            <div className="paragraph" draggable>
               <p>I'm a Front-end Developer, Graphic Designer & Video Editor</p>
               <p>Got my first Software engineering certification at <a href="https://www.the-curve.africa/">The Curve Africa</a></p>
             </div>

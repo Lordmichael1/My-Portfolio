@@ -1,23 +1,25 @@
 .Parent {
     width: 100%;
-    min-height: 100vh; /* Changed from fixed height */
+    min-height: 100vh; 
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
-    padding: 2rem 0;
-    box-sizing: border-box;
+    justify-content: center;
   }
   
   .HeroThree {
     width: 90%;
+    height: 80vh;
+    /* background-color: black; */
     display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
     gap: 30px;
-    flex-wrap: wrap;
   }
   
   .AboutText3 {
     width: 50%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -25,6 +27,7 @@
   
   .Txt {
     width: 100%;
+    height: 80%;
     font-size: 19px;
     word-spacing: 5px;
     line-height: 28px;
@@ -37,18 +40,30 @@
   
   .About3pics {
     width: 50%;
+    height: 90%;
     background-color: #fff;
-    height: auto;
+    border-radius: 50px 0px;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 0px 0px;
+      border-radius: 50px 0px;
+    }
   }
   
   @media screen and (max-width: 768px) {
     .Parent {
       min-height: auto;
+      padding-top: 10%;
+      padding-bottom: 10%;
     }
   
     .HeroThree {
       flex-direction: column;
-      gap: 15px;
+      gap: 40px;
+      height: auto;
     }
   
     .AboutText3,
@@ -58,7 +73,8 @@
     }
   
     .About3pics {
-      height: 250px; /* Optional — adjust as needed */
+      height: 250px; 
+      border-radius: 50px 0px;
     }
   }
   

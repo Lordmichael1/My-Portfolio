@@ -1,0 +1,53 @@
+.scroll-to-top {
+    position: absolute; 
+    bottom: 20px;
+    right: 20px; 
+    width: 40px; 
+    height: 40px; 
+    background-color: rgb(255, 196, 0);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    font-size: 20px; 
+    cursor: pointer;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1000; 
+}
+  
+.scroll-to-top:hover {
+    background-color: orange;
+}
+
+.arrow {
+    display: inline;
+}
+
+.mobile-text {
+    display: none;
+}
+  
+@media (max-width: 480px) {
+    .scroll-to-top {
+      bottom: 0;
+      width: 100%;
+      right: 0;
+      height: 35px;
+      font-size: 18px;
+      border-radius: 0%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .arrow {
+        display: inline;
+        padding-bottom: 2%;
+    }
+    
+    .mobile-text {
+        display: inline;
+        font-size: 20px;
+    }
+}

@@ -8,6 +8,7 @@ import Contact from "./Pages/Contact/Contact";
 import Project from "./Pages/Project/Project";
 import Resume from "./Pages/Resume/Resume";
 import { SpeedInsights } from "@vercel/speed-insights/react"
+import ScrollToTop from "./Components/ScrollToTop/ScrollToTop";
 
 const App = () => {
   return (
@@ -21,7 +22,7 @@ const App = () => {
           <Route path="/projects" element={<Project />} />
           <Route path="/resume" element={<Resume />} />
         </Routes>
-        {/* <Footer /> */}
+        <ScrollToTop />
       </div>
       <SpeedInsights />
     </Router>

@@ -1,23 +1,26 @@
 .Wrapper {
     width: 100%;
-    min-height: 100vh; /* Better than fixed 100vh */
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
-    padding: 2rem 0; /* Add spacing if needed */
-    box-sizing: border-box;
+    justify-content: center;
   }
   
   .HeroTwo {
     width: 90%;
+    height: 70vh;
     display: flex;
     gap: 30px;
-    flex-wrap: wrap; /* helpful on tight screens */
+    flex-direction: row-reverse;
+    /* background-color: #000; */
+    justify-content: center;
+    align-items: center;
   }
   
   .AboutText2 {
     width: 50%;
+    height: 100%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -25,6 +28,7 @@
   
   .AboutLowerTxt {
     width: 100%;
+    height: 80%;
     font-size: 19px;
     word-spacing: 5px;
     line-height: 28px;
@@ -32,23 +36,34 @@
   
   .AboutLowerTxt a {
     text-decoration: none;
-    color: orange;
+    color: rgb(255, 196, 0);
   }
   
   .Aboutpics {
     width: 50%;
+    height: 90%;
     background-color: #fff;
+    border-radius: 50px 0px;
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 0px 0px;
+      border-radius: 50px 0px;
+    }
+    
   }
   
   @media screen and (max-width: 768px) {
     .Wrapper {
       min-height: auto;
-      /* padding-top: 80%; */
+      padding-top: 10%;
     }
   
     .HeroTwo {
       flex-direction: column-reverse;
-      gap: 15px;
+      gap: 40px;
       height: auto; 
     }
   
@@ -59,8 +74,16 @@
     }
   
     .Aboutpics {
-      height: 270px; /* Or whatever looks good on mobile */
+      height: 250px;     
       background-color: #fff;
+
+      & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: 0px 0px;
+        border-radius: 50px 0px;
+      }
     }
   }
   
