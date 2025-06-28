@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.Name {
+    font-family: "Edu NSW ACT Cursive", cursive;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    
+    @media screen and (width <= 450px){
+        font-size: 13px;
+    }
+}
