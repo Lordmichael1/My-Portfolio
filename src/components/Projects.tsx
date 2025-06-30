@@ -40,7 +40,7 @@ const Projects: React.FC = () => {
     {
       title: 'RentWave',
       description: 'A responsive application built with React to help landlords communicate with tenants and help tenants make rent payments. this was a team project for our final project defence at The Curve Africa',
-      image: '/Public/rentwave.png',
+      image: 'https://res.cloudinary.com/dm3j8ksa3/image/upload/v1751319181/rentwave_jomeat.png',
       tags: ['React', 'JavaScript', 'Redux', 'Tailwind'],
       live: 'https://rent-wave.vercel.app/',
       featured: false
