@@ -79,7 +79,7 @@ const About: React.FC = () => {
             {/* Image */}
             <div className="rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="/Public/Certificate.jpg"
+                src="https://res.cloudinary.com/dm3j8ksa3/image/upload/v1751319092/Certificate_xuwyot.jpg"
                 alt="Working"
                 className="w-full h-96 object-cover"
               />
@@ -90,7 +90,7 @@ const About: React.FC = () => {
             <div className="relative">
               <div className="rounded-2xl overflow-hidden shadow-2xl">
                 <img
-                  src="/Public/team.jpg"
+                  src="https://res.cloudinary.com/dm3j8ksa3/image/upload/v1751319182/team_s0vd1o.jpg"
                   alt="Working"
                   className="w-full h-96 object-cover"
                 />

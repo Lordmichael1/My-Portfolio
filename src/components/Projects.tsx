@@ -24,7 +24,7 @@ const Projects: React.FC = () => {
     {
       title: 'Flyer and Logo Designs',
       description: 'Few of my recent flyer and logo designs.',
-      image: '/Public/Behance.jpg',
+      image: 'https://res.cloudinary.com/dm3j8ksa3/image/upload/v1751319092/Behance_vsfhza.jpg',
       tags: ['PixelLab', 'Snapseed', 'Pinterest', 'Photoroom','CorelDraw', 'PhotoShop'],
       live: 'https://www.behance.net/michaelgodwin8',
       featured: false
@@ -32,7 +32,7 @@ const Projects: React.FC = () => {
     {
       title: 'This Portfolio Website',
       description: 'A responsive portfolio website showcasing modern web development practices with smooth animations, and optimized performance.',
-      image: '/Public/image.jpg',
+      image: 'https://res.cloudinary.com/dm3j8ksa3/image/upload/v1751319092/image_uyruwa.jpg',
       tags: ['React', 'TypeScript', 'Framer Motion', 'Tailwind'],
       live: '#',
       featured: false
