@@ -27,7 +27,7 @@ const Footer: React.FC = () => {
         onClick={scrollToTop}
         className="absolute -top-6 left-1/2 transform -translate-x-1/2 bg-gradient-to-r from-blue-600 to-emerald-600 text-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 hover:scale-110"
       >
-        <ArrowUp className="w-6 h-6" />
+        <ArrowUp className="w-6 h-6 transform -translate-y-1/2 animate-bounce" />
       </button>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8">
@@ -90,7 +90,7 @@ const Footer: React.FC = () => {
               <p className="text-sm text-gray-400 mb-4">
                 Available for freelance opportunities
               </p>
-              <div className="inline-flex items-center px-3 py-1 bg-green-600 text-white text-sm rounded-full">
+              <div className="inline-flex items-center px-3 py-1 bg-green-600 text-white text-sm rounded-full animate-pulse">
                 <div className="w-2 h-2 bg-white rounded-full mr-2 animate-pulse"></div>
                 Open to work
               </div>

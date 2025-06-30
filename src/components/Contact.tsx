@@ -5,7 +5,7 @@ const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
-    subject: '',
+    phoneNumber: '',
     message: ''
   });
 
@@ -32,13 +32,14 @@ const Contact: React.FC = () => {
     setFormData({
       name: '',
       email: '',
-      subject: '',
+      phoneNumber: '',
       message: ''
     });
     
     alert('Thank you for your message! I\'ll get back to you soon.');
   };
 
+  
   const contactInfo = [
     {
       icon: <Mail className="w-6 h-6" />,
@@ -169,18 +170,18 @@ const Contact: React.FC = () => {
               </div>
 
               <div>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
-                  Subject
+                <label htmlFor="phoneNumber" className="block text-sm font-medium text-gray-700 mb-2">
+                  Phone Number
                 </label>
                 <input
-                  type="text"
-                  id="subject"
-                  name="subject"
-                  value={formData.subject}
+                  type="tel"
+                  id="phoneNumber"
+                  name="phoneNumber"
+                  value={formData.phoneNumber}
                   onChange={handleChange}
                   required
                   className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
-                  placeholder="Project Inquiry"
+                  placeholder="Phone Number"
                 />
               </div>
 

@@ -12,3 +12,16 @@
         font-size: 13px;
     }
 }
+
+.btns {
+    @media screen and (width <= 450px){
+        button {
+            padding: 25px;
+        }
+    }
+}
+
+input, textarea {
+    outline: none;
+}
+

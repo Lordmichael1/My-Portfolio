@@ -4,7 +4,7 @@ import { Code, Heart, Lightbulb, Target } from 'lucide-react';
 const About: React.FC = () => {
   const stats = [
     { number: '10+', label: 'Projects Completed' },
-    { number: '3+', label: 'Years Experience' },
+    { number: '2+', label: 'Years Experience' },
     { number: '15+', label: 'Happy Clients' },
     { number: '98.9%', label: 'Satisfaction Rate' },
   ];
@@ -67,7 +67,7 @@ const About: React.FC = () => {
             </div>
             <div className="pt-6">
               <a 
-                href="../../Public/Michael Godwin's Resume.pdf" 
+                href="/Public/Michael Godwin's Resume.pdf" 
                 download 
                 className="inline-flex items-center bg-gradient-to-r from-blue-600 to-emerald-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105"
               >
@@ -76,22 +76,49 @@ const About: React.FC = () => {
             </div>
 
           </div>
-
-          {/* Image */}
-          <div className="relative">
+            {/* Image */}
             <div className="rounded-2xl overflow-hidden shadow-2xl">
               <img
-                src="https://images.pexels.com/photos/1181244/pexels-photo-1181244.jpeg?auto=compress&cs=tinysrgb&w=600"
+                src="/Public/Certificate.jpg"
                 alt="Working"
                 className="w-full h-96 object-cover"
               />
             </div>
-            {/* <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-blue-600 to-emerald-600 text-white p-6 rounded-2xl shadow-xl">
-              <p className="font-bold text-2xl">3+</p>
-              <p className="text-sm opacity-90">Years of Experience</p>
-            </div> */}
-          </div>
         </div>
+        <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
+            {/* Image */}
+            <div className="relative">
+              <div className="rounded-2xl overflow-hidden shadow-2xl">
+                <img
+                  src="/Public/team.jpg"
+                  alt="Working"
+                  className="w-full h-96 object-cover"
+                />
+                <div className="absolute -bottom-6 -right-6 bg-gradient-to-r from-blue-600 to-emerald-600 text-white p-4 rounded-2xl shadow-xl">
+                  <p className="text-sm opacity-90">The Curve Africa Cohort 4</p>
+                  <p className="font-bold text-2xl">2024</p>
+                </div>
+              </div>
+            </div>
+            <div className="space-y-4 text-lg text-gray-600 leading-relaxed">
+              <p>
+                Around December 2023, I heard about this software engineering
+                school <a href="https://www.the-curve.africa/">The Curve Africa</a>, 
+                I applied and got in, started receiving lectures April 2024.
+              </p>
+              <p>
+                For our final project at The Curve Africa, 
+                We were paired in group in preparation for our Hackathon
+                My teammates and i come together and we were able to build a website called 
+                <a href="https://www.the-curve.africa/">"RentWave"</a>
+              </p>
+              <p>
+                A platform where Landlord and tanant can interact, make rent payment, send maintaince request and add new tanant 
+                We used React to build the UI, with redux, useState and useReducer for state management. for api consumption we used axios.
+                Big thanks to my teammates for the cooperation, and determination to completing the our project.
+              </p>
+            </div>
+            </div>
 
         {/* Stats */}
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-20">

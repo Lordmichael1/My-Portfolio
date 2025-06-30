@@ -22,7 +22,7 @@ const Projects: React.FC = () => {
       featured: true
     },
     {
-      title: 'flyer and logo designs',
+      title: 'Flyer and Logo Designs',
       description: 'Few of my recent flyer and logo designs.',
       image: '/Public/Behance.jpg',
       tags: ['PixelLab', 'Snapseed', 'Pinterest', 'Photoroom','CorelDraw', 'PhotoShop'],

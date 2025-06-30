@@ -112,22 +112,22 @@ const Skills: React.FC = () => {
         {/* Certifications */}
         <div className="mt-16 text-center">
           <h3 className="text-2xl font-bold text-gray-900 mb-8">Certifications & Learning</h3>
-          <div className="grid md:grid-cols-3 gap-6">
-            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
+          <div className="grid md:grid-cols-3 gap-6 ">
+            <div className="bg-white p-6 rounded-xl shadow-md shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
               <div className="w-16 h-16 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold text-xl">TCA</span>
               </div>
               <h4 className="font-semibold text-gray-800">The Curve Africa</h4>
               <p className="text-gray-600 text-sm mt-2">6 month Software engineering course</p>
             </div>
-            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
+            <div className="bg-white p-6 rounded-xl shadow-md shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
               <div className="w-16 h-16 bg-gradient-to-r from-emerald-600 to-teal-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold text-l">Udemy</span>
               </div>
               <h4 className="font-semibold text-gray-800">Modern JS for beginners- a udemy course</h4>
               <p className="text-gray-600 text-sm mt-2">A complete JavaScript beginners guide</p>
             </div>
-            <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-all duration-300">
+            <div className="bg-white p-6 rounded-xl shadow-md shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2">
               <div className="w-16 h-16 bg-gradient-to-r from-orange-600 to-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-white font-bold text-xl">GD</span>
               </div>
