@@ -48,25 +48,34 @@ const slides = [
 
 const Carousel: React.FC = () => {
   return (
-    <div className="w-full px-4 py-10 bg-gradient-to-l from-blue-100 to-grey-100">
+    <div className="w-full px-4 py-10 bg-gradient-to-br from-blue-100 to-gray-100">
       <h2 className="text-4xl font-bold text-center mb-6 text-gray-800">
         Recent Designs
       </h2>
       <div className="max-w-6xl mx-auto">
         <Swiper
-            spaceBetween={30}
-            slidesPerView={3}
-            loop={true}
-            autoplay={{
+          spaceBetween={20}
+          loop={true}
+          autoplay={{
             delay: 1000,
             disableOnInteraction: false,
           }}
           modules={[Autoplay]}
+          breakpoints={{
+            320: { slidesPerView: 1 },   // small phones
+            640: { slidesPerView: 1 },   // larger phones
+            768: { slidesPerView: 2 },   // tablets
+            1024: { slidesPerView: 3 },  // desktops
+          }}
         >
           {slides.map((slide, index) => (
             <SwiperSlide key={index}>
-              <div className="bg-white shadow-xl rounded-xl overflow-hidden ">
-                <img src={slide.image} alt={slide.title} className="w-[1040px] h-[450px] object-cover" />
+              <div className="bg-white shadow-xl rounded-xl overflow-hidden">
+                <img
+                  src={slide.image}
+                  alt={slide.title}
+                  className="w-full md:w-full h-[450px] object-cover hover:scale-105 transition-transform duration-300"
+                />
               </div>
             </SwiperSlide>
           ))}
