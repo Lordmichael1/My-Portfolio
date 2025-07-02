@@ -67,7 +67,7 @@ const About: React.FC = () => {
             </div>
             <div className="pt-6">
               <a 
-                href="https://res.cloudinary.com/dm3j8ksa3/raw/upload/v1751320184/Michael_Godwin_My_Internship_CV_1_g8kueb.docx" 
+                href="/Public/Michael-Godwin-Resume.pdf" 
                 download 
                 className="inline-flex items-center bg-gradient-to-r from-blue-600 to-emerald-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105"
               >
