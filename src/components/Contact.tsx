@@ -156,11 +156,9 @@ const Contact: React.FC = () => {
             </div>
           </div>
 
-          {/* Contact Form */}
+         
           <div className="bg-white rounded-2xl shadow-xl p-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Send Message</h3>
-
-            {/* ✅ Connected form to `ref` and updated name attributes */}
             <form ref={form} onSubmit={sendEmail} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
