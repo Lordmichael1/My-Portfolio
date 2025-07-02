@@ -1,5 +1,6 @@
 import React from 'react';
-import { ExternalLink, Github, ArrowRight, Briefcase } from 'lucide-react';
+import { ExternalLink, Github, ArrowRight } from 'lucide-react';
+import Carousel from './Carousel';
 
 const Projects: React.FC = () => {
   const projects = [
@@ -159,6 +160,7 @@ const Projects: React.FC = () => {
           </div>
         </div>
       </div>
+       <Carousel/>
     </section>
   );
 };

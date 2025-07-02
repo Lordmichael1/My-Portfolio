@@ -1,11 +1,10 @@
 import React from 'react';
-import { ChevronDown, Github, Linkedin, Mail } from 'lucide-react';
-import myphoto from "../Assets/myphoto.jpg"
+import { ChevronDown } from 'lucide-react';
 
 const Hero: React.FC = () => {
-  const scrollToAbout = () => {
-    document.querySelector('#about')?.scrollIntoView({ behavior: 'smooth' });
-  };
+  // const scrollToAbout = () => {
+  //   document.querySelector('#about')?.scrollIntoView({ behavior: 'smooth' });
+  // };
 
   return (
     <section id="home" className="min-h-screen relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-emerald-50">
@@ -18,7 +17,7 @@ const Hero: React.FC = () => {
           <div className="pt-12 md:pt-13 mb-8 relative">
             <div className=" w-48 h-48 mx-auto rounded-full overflow-hidden border-4 border-white shadow-2xl">
               <img
-                src={myphoto}
+                src="https://res.cloudinary.com/dm3j8ksa3/image/upload/v1751319713/IMG-20250202-WA0028_orrcot.jpg"
                 alt="Profile"
                 className="w-full h-full object-cover"
               />
