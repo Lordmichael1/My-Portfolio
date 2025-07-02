@@ -48,10 +48,11 @@ const slides = [
 
 const Carousel: React.FC = () => {
   return (
-    <div className="w-full px-4 py-10 bg-gradient-to-br from-blue-100 to-gray-100">
-      <h2 className="text-4xl font-bold text-center mb-6 text-gray-800">
+    <div className="w-full px-4 py-10 bg-gradient-to-br from-blue-50 via-white to-emerald-50">
+      <h2 className="text-4xl font-bold text-center mb-6 text-gray-900 md:text-5xl">
         Recent Designs
       </h2>
+      <div className="w-24 h-1 bg-gradient-to-r from-blue-600 to-emerald-500 mx-auto rounded-full mb-6"></div>
       <div className="max-w-6xl mx-auto">
         <Swiper
           spaceBetween={20}

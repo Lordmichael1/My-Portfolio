@@ -1,16 +1,20 @@
-import React, { useState } from 'react';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter, } from 'lucide-react';
+import React, { useRef, useState } from 'react';
+import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from 'lucide-react';
+import emailjs from "@emailjs/browser";
+import Swal from 'sweetalert2';
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phoneNumber: '',
+    user_name: '',
+    user_email: '',
+    user_phone: '',
     message: ''
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const form = useRef<HTMLFormElement | null>(null);
 
+  // ✅ FIXED event typing
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({
       ...formData,
@@ -18,34 +22,57 @@ const Contact: React.FC = () => {
     });
   };
 
-  const handleSubmit = async (e: React.FormEvent) => {
+  const sendEmail = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    if (!form.current) return;
+
     setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000));
-    
-    console.log('Form submitted:', formData);
-    setIsSubmitting(false);
-    
-    // Reset form
-    setFormData({
-      name: '',
-      email: '',
-      phoneNumber: '',
-      message: ''
-    });
-    
-    alert('Thank you for your message! I\'ll get back to you soon.');
+
+    emailjs
+      .sendForm(
+        "service_6ujblzc",     // ✅ Your EmailJS service ID
+        "template_uhac7e8",    // ✅ Your EmailJS template ID
+        form.current,          // ✅ Pass the actual form DOM element
+        "7snYqCuny-Ss3NM3t"    // ✅ Your EmailJS public key
+      )
+      .then(
+        () => {
+          Swal.fire({
+            position: "center",
+            icon: "success",
+            title: "Your message has been delivered",
+            showConfirmButton: true,
+          });
+          form.current?.reset();
+          setFormData({
+            user_name: '',
+            user_email: '',
+            user_phone: '',
+            message: ''
+          });
+        },
+        (error) => {
+          Swal.fire({
+            position: "center",
+            icon: "warning",
+            title: "Your message couldn't go through",
+            text: "Check your network and try again",
+            showConfirmButton: true,
+          });
+          console.error("❌ Failed to send:", error);
+        }
+      )
+      .finally(() => {
+        setIsSubmitting(false);
+      });
   };
 
-  
   const contactInfo = [
     {
       icon: <Mail className="w-6 h-6" />,
       title: 'Email',
       value: 'mickeygodwin07@gmail.com',
-      link: 'gmail:mickeygodwin07@gmail.com'
+      link: 'mailto:mickeygodwin07@gmail.com'
     },
     {
       icon: <Phone className="w-6 h-6" />,
@@ -93,7 +120,6 @@ const Contact: React.FC = () => {
               </p>
             </div>
 
-            {/* Contact Details */}
             <div className="space-y-6">
               {contactInfo.map((info, index) => (
                 <a
@@ -112,7 +138,6 @@ const Contact: React.FC = () => {
               ))}
             </div>
 
-            {/* Social Links */}
             <div className="pt-8">
               <h4 className="font-semibold text-gray-900 mb-4">Follow Me</h4>
               <div className="flex space-x-4">
@@ -134,53 +159,54 @@ const Contact: React.FC = () => {
           {/* Contact Form */}
           <div className="bg-white rounded-2xl shadow-xl p-8">
             <h3 className="text-2xl font-bold text-gray-900 mb-6">Send Message</h3>
-            
-            <form onSubmit={handleSubmit} className="space-y-6">
+
+            {/* ✅ Connected form to `ref` and updated name attributes */}
+            <form ref={form} onSubmit={sendEmail} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="user_name" className="block text-sm font-medium text-gray-700 mb-2">
                     Your Name
                   </label>
                   <input
                     type="text"
-                    id="name"
-                    name="name"
-                    value={formData.name}
+                    id="user_name"
+                    name="user_name"
+                    value={formData.user_name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-xl"
                     placeholder="John Doe"
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="user_email" className="block text-sm font-medium text-gray-700 mb-2">
                     Email Address
                   </label>
                   <input
                     type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
+                    id="user_email"
+                    name="user_email"
+                    value={formData.user_email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+                    className="w-full px-4 py-3 border border-gray-300 rounded-xl"
                     placeholder="john@example.com"
                   />
                 </div>
               </div>
 
               <div>
-                <label htmlFor="phoneNumber" className="block text-sm font-medium text-gray-700 mb-2">
+                <label htmlFor="user_phone" className="block text-sm font-medium text-gray-700 mb-2">
                   Phone Number
                 </label>
                 <input
                   type="tel"
-                  id="phoneNumber"
-                  name="phoneNumber"
-                  value={formData.phoneNumber}
+                  id="user_phone"
+                  name="user_phone"
+                  value={formData.user_phone}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-xl"
                   placeholder="Phone Number"
                 />
               </div>
@@ -196,7 +222,7 @@ const Contact: React.FC = () => {
                   onChange={handleChange}
                   required
                   rows={6}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all duration-300 resize-none"
+                  className="w-full px-4 py-3 border border-gray-300 rounded-xl resize-none"
                   placeholder="Tell me about your project..."
                 ></textarea>
               </div>
@@ -204,7 +230,7 @@ const Contact: React.FC = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-gradient-to-r from-blue-600 to-emerald-600 text-white py-4 px-6 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
+                className="w-full bg-gradient-to-r from-blue-600 to-emerald-600 text-white py-4 px-6 rounded-xl font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105 disabled:opacity-50"
               >
                 {isSubmitting ? (
                   <div className="flex items-center justify-center">
@@ -222,7 +248,6 @@ const Contact: React.FC = () => {
           </div>
         </div>
 
-        {/* Bottom CTA */}
         <div className="mt-20 text-center">
           <div className="bg-gradient-to-r from-blue-600 to-emerald-600 rounded-2xl p-8 text-white">
             <h3 className="text-3xl font-bold mb-4">Ready to Start Your Project?</h3>
@@ -230,7 +255,7 @@ const Contact: React.FC = () => {
               Let's discuss how we can bring your ideas to life with cutting-edge technology and thoughtful design.
             </p>
             <a
-              href="mailto:alex.johnson@email.com"
+              href="mailto:mickeygodwin07@gmail.com"
               className="inline-flex items-center bg-white text-blue-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
             >
               <Mail className="w-5 h-5 mr-2" />
