@@ -1,7 +1,9 @@
 import React, { useRef, useState } from 'react';
-import { Mail, Phone, MapPin, Send, Github, Linkedin, Twitter } from 'lucide-react';
+import { Mail, Phone, MapPin, Send, Github } from 'lucide-react';
 import emailjs from "@emailjs/browser";
 import Swal from 'sweetalert2';
+import { MdOutlineWhatsapp } from "react-icons/md";
+import { FaBehance, FaInstagram }  from "react-icons/fa";
 
 const Contact: React.FC = () => {
   const [formData, setFormData] = useState({
@@ -90,8 +92,8 @@ const Contact: React.FC = () => {
 
   const socialLinks = [
     { icon: <Github className="w-6 h-6" />, name: 'GitHub', url: '#' },
-    { icon: <Linkedin className="w-6 h-6" />, name: 'LinkedIn', url: '#' },
-    { icon: <Twitter className="w-6 h-6" />, name: 'Twitter', url: '#' },
+    { icon: <FaInstagram className="w-6 h-6" />, name: 'Instagram', url: '#' },
+    { icon: <FaBehance className="w-6 h-6" />, name: 'Behance', url: '#' },
   ];
 
   return (
@@ -253,10 +255,10 @@ const Contact: React.FC = () => {
               Let's discuss how we can bring your ideas to life with cutting-edge technology and thoughtful design.
             </p>
             <a
-              href="mailto:mickeygodwin07@gmail.com"
+              href="https://wa.link/z819nn"
               className="inline-flex items-center bg-white text-blue-600 px-8 py-4 rounded-full font-semibold hover:bg-gray-100 transition-all duration-300 transform hover:scale-105"
             >
-              <Mail className="w-5 h-5 mr-2" />
+              <MdOutlineWhatsapp className="w-5 h-5 mr-2" />
               Start a Conversation
             </a>
           </div>
