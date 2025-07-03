@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heart, ArrowUp, Github } from 'lucide-react';
+import { Heart, ArrowUp, Github, Facebook } from 'lucide-react';
 import { FaBehance, FaInstagram } from 'react-icons/fa';
 
 const Footer: React.FC = () => {
@@ -18,9 +18,10 @@ const Footer: React.FC = () => {
   ];
 
   const socialLinks = [
-    { icon: <Github className="w-6 h-6" />, name: 'GitHub', url: '#' },
-    { icon: <FaInstagram className="w-6 h-6" />, name: 'Instagram', url: '#' },
-    { icon: <FaBehance className="w-6 h-6" />, name: 'Behance', url: '#' },
+    { icon: <Github className="w-6 h-6" />, name: 'GitHub', url: 'https://github.com/Lordmichael1' },
+    { icon: <FaInstagram className="w-6 h-6" />, name: 'Instagram', url: 'https://www.instagram.com/im_m1cha3l?igsh=MWg4MWduczJoZTU3eQ==' },
+    { icon: <FaBehance className="w-6 h-6" />, name: 'Behance', url: 'https://www.behance.net/michaelgodwin8' },
+    { icon: <Facebook className="w-6 h-6" />, name: 'Behance', url: 'https://www.facebook.com/mickeygodwin07/' },
   ];
 
   const scrollToSection = (href: string) => {

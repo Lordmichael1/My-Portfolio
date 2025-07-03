@@ -6,20 +6,20 @@ const Projects: React.FC = () => {
   const projects = [
     {
       title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce solution with React, Node.js, and Korapay integration. Features include user authentication, product management, cart functionality, and secure payment processing.',
+      description: 'An e-commerce solution with React, Node.js, and Korapay integration. Features include user authentication, product management, cart functionality, and secure payment processing.',
       image: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=600',
-      tags: ['React', 'Node.js', 'MongoDB', 'Korapay'],
-      github: '#',
+      tags: ['React', 'Node.js', 'Javascript','HTML','CSS', 'Korapay'],
+      github: 'https://github.com/Lordmichael1/eccommerce-Festac',
       live: '#',
-      featured: true
+      featured: true,
     },
     {
-      title: 'Task Management App',
-      description: 'A collaborative project management tool with real-time updates, drag-and-drop functionality, and team collaboration features. Built with modern React patterns and WebSocket integration.',
-      image: 'https://images.pexels.com/photos/1181675/pexels-photo-1181675.jpeg?auto=compress&cs=tinysrgb&w=600',
-      tags: ['React', 'TypeScript', 'Socket.io', 'PostgreSQL', 'Tailwind'],
-      github: '#',
-      live: '#',
+      title: 'RentWave',
+      description: 'A responsive application built with React to help landlords communicate with tenants and help tenants make rent payments. this was a team project for our final project defence at The Curve Africa',
+      image: 'https://res.cloudinary.com/dm3j8ksa3/image/upload/v1751319181/rentwave_jomeat.png',
+      tags: ['React', 'JavaScript', 'Redux', 'Tailwind', 'MongoDB', 'Node.Js'],
+      github: 'https://github.com/Lordmichael1/RentWave',
+      live: 'https://rent-wave.vercel.app/',
       featured: true
     },
     {
@@ -39,11 +39,11 @@ const Projects: React.FC = () => {
       featured: false
     },
     {
-      title: 'RentWave',
-      description: 'A responsive application built with React to help landlords communicate with tenants and help tenants make rent payments. this was a team project for our final project defence at The Curve Africa',
-      image: 'https://res.cloudinary.com/dm3j8ksa3/image/upload/v1751319181/rentwave_jomeat.png',
-      tags: ['React', 'JavaScript', 'Redux', 'Tailwind'],
-      live: 'https://rent-wave.vercel.app/',
+      title: 'Marketing Site',
+      description: 'A responsive application built with React during class time at The Curve Africa',
+      image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRzWvBHn8e9DCczkQIxwKuAlytPuC_efTV62w&s',
+      tags: ['React', 'JavaScript', 'Redux', 'HTML', 'CSS'],
+      live: 'https://github.com/Lordmichael1/Marketing-Site',
       featured: false
     },
   ];
@@ -105,7 +105,15 @@ const Projects: React.FC = () => {
                     Code
                   </a>
                   <a
-                    href={project.live}
+                    href={project.live === '#' ? undefined : project.live}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={(e) => {
+                    if (project.live === '#') {
+                    e.preventDefault();
+                    alert("No Live Demo");
+                    }
+                  }}
                     className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-600 to-emerald-600 text-white rounded-full font-semibold hover:shadow-lg transition-all duration-300"
                   >
                     <ExternalLink className="w-5 h-5 mr-2" />
