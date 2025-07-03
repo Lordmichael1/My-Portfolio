@@ -55,7 +55,7 @@ const Footer: React.FC = () => {
                   >
                     <div className="text-gray-600 group-hover:text-emerald-600 transition-colors duration-300">
                       {social.icon}
-                    </div>
+                    </div> 
                   </a>
                 ))}
             </div>
