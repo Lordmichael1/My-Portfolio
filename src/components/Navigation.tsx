@@ -38,9 +38,14 @@ const Navigation: React.FC<NavigationProps> = ({ activeSection }) => {
       scrolled ? 'bg-white/90 backdrop-blur-md shadow-lg' : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
-          <div className="Name text-2xl font-bold text-blue-900">
-            Michael Godwin
+        <div className="flex justify-between items-center py-2">
+          <div className="Name flex items-center space-x-0 text-2xl font-bold ">
+            <img 
+              src="https://res.cloudinary.com/dm3j8ksa3/image/upload/v1751564138/20250703_183039_jbhhfw.png" 
+              alt="Logo" 
+              className="w-14 h-14 object-contain" 
+            />
+            <span className='bg-gradient-to-r from-blue-900 to-emerald-900 bg-clip-text text-transparent'>Michael Godwin</span>
           </div>
 
           {/* Desktop Menu */}

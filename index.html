@@ -2,11 +2,27 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="icon" type="image/svg+xml" href="https://res.cloudinary.com/dm3j8ksa3/image/upload/v1751564144/20250703_182656_iuhnm5.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Michael Godwin</title>
+
+    <!-- Prevent right-click -->
+    <script>
+      document.addEventListener('contextmenu', event => event.preventDefault());
+    </script>
+
+    <!-- Disable caching (to prevent easy saving of assets) -->
+    <meta http-equiv="Cache-Control" content="no-store" />
+    <meta http-equiv="Pragma" content="no-cache" />
+    <meta http-equiv="Expires" content="0" />
+
     <style>
       @import url('https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@400..700&display=swap');
+      /* Prevent downloading on images (HTML tag level)  */
+      img {
+      pointer-events: none;
+      user-select: none;
+      }
     </style>
   </head>
   <body>
