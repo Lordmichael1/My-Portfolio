@@ -67,8 +67,8 @@ const About: React.FC = () => {
             </div>
             <div className="pt-6">
               <a 
-                href="https://docs.google.com/document/d/1T8rmQDDl1IZs70kNtca94netM0gn7MYC/edit?usp=sharing&ouid=110377521864708193812&rtpof=true&sd=true" 
-                download 
+                href="https://docs.google.com/document/d/1T8rmQDDl1IZs70kNtca94netM0gn7MYC/export?format=pdf" 
+                download="resume.pdf"
                 className="inline-flex items-center bg-gradient-to-r from-blue-600 to-emerald-600 text-white px-8 py-4 rounded-full font-semibold hover:shadow-lg transition-all duration-300 transform hover:scale-105"
               >
               View My Resume
