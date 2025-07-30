@@ -6,42 +6,44 @@ import "swiper/css";
 const slides = [
   {
     image: "https://res.cloudinary.com/dm3j8ksa3/image/upload/v1751463032/20250605_112102-01_wmuhad.jpg",
-    title: "Modern UI",
-    description: "Beautiful Tailwind components",
+    name: "black",
   },
   {
     image: "https://res.cloudinary.com/dm3j8ksa3/image/upload/v1751463046/20250605_010306-01_p0vjgq.jpg",
-    title: "Responsive",
-    description: "Works on all screens",
+    name: "white",
   },
   {
     image: "https://res.cloudinary.com/dm3j8ksa3/image/upload/v1751463054/20250227_133912-01_m0aoft.jpg",
-    title: "Fast",
-    description: "Blazing speed performance",
+    name: "black",
   },
    {
     image: "https://res.cloudinary.com/dm3j8ksa3/image/upload/v1751463069/20250527_132645-01_qeoetf.jpg ",
-    title: "Customer",
-    description: "Styled your way",
+    name: "white",
   },
    {
     image: "https://res.cloudinary.com/dm3j8ksa3/image/upload/v1751463089/20250605_002307-01_xfckbq.jpg",
-    title: "Case",
-    description: "Styled your way",
+    name: "black",
   },
   {
     image: "https://res.cloudinary.com/dm3j8ksa3/image/upload/v1751463107/20250403_204306-01_fxrty6.jpg",
+    name: "white",
   },
    {
     image: "https://res.cloudinary.com/dm3j8ksa3/image/upload/v1751463126/20250329_081859-01_nr1ptt.jpg",
-    title: "Case",
-    description: "Styled your way",
+    name: "black",
   },
    {
     image: "https://res.cloudinary.com/dm3j8ksa3/image/upload/v1751463158/20250613_231833-01_e0des2.jpg",
-    title: "Case",
-    description: "Styled your way",
+    name: "white",
   },
+  {
+    image: "https://res.cloudinary.com/dm3j8ksa3/image/upload/v1753838533/20250226_145600-01_pclqa4.jpg",
+    name: "black",
+  },
+  {
+    image: "https://res.cloudinary.com/dm3j8ksa3/image/upload/v1753834605/729017c8-e2f6-40e7-9b21-92d301f1fc35.png",
+    name: "white",
+  }
 ];
 
 const Carousel: React.FC = () => {
@@ -72,7 +74,7 @@ const Carousel: React.FC = () => {
               <div className="bg-white shadow-xl rounded-xl overflow-hidden">
                 <img
                   src={slide.image}
-                  alt={slide.title}
+                  alt=""
                   className="w-full md:w-full h-[450px] object-cover hover:scale-105 transition-transform duration-300"
                 />
               </div>
