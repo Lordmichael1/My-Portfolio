@@ -31,8 +31,6 @@ const slides = [
   },
   {
     image: "https://res.cloudinary.com/dm3j8ksa3/image/upload/v1751463107/20250403_204306-01_fxrty6.jpg",
-    title: "Case",
-    description: "Styled your way",
   },
    {
     image: "https://res.cloudinary.com/dm3j8ksa3/image/upload/v1751463126/20250329_081859-01_nr1ptt.jpg",
